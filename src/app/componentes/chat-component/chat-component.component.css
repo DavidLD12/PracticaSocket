@@ -1,0 +1,185 @@
+/* Estilos generales */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+h2 {
+  text-align: center;
+  color: #4caf50;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #f9fafc;
+  border-bottom: 1px solid #ddd;
+}
+
+.input-group label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #555;
+}
+
+input[type="file"] {
+  padding: 5px;
+  font-size: 14px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* Botón específico para conectar */
+button.btn-outline-primary {
+  background-color: #4caf50;
+  color: white;
+}
+
+button.btn-outline-primary:hover {
+  background-color: #45a049;
+}
+
+/* Botón específico para desconectar */
+button.btn-outline-danger {
+  background-color: #f44336;
+  color: white;
+}
+
+button.btn-outline-danger:hover {
+  background-color: #d32f2f;
+}
+
+/* Botón específico para enviar */
+button.btn-outline-success {
+  background-color: #2196f3;
+  color: white;
+}
+
+button.btn-outline-success:hover {
+  background-color: #1e88e5;
+}
+
+/* Botón específico para archivo */
+button.btn-outline-warning {
+  background-color: #ff9800;
+  color: white;
+}
+
+button.btn-outline-warning:hover {
+  background-color: #fb8c00;
+}
+
+/* Estilos del chat con fuente minimalista */
+.mensajes {
+  flex: 1;
+  background: #f9fafc;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  overflow-y: auto;
+  padding: 15px;
+  font-family: 'Roboto', sans-serif; /* Fuente minimalista */
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.mensajes div {
+  margin-bottom: 15px;
+  padding: 12px;
+  background: #ffffff; /* Fondo blanco para los mensajes */
+  border-radius: 8px;  /* Bordes más suaves */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  animation: fadeIn 0.3s ease;
+}
+
+.mensajes div strong {
+  color: #333; /* Color de texto para los nombres */
+  font-weight: 600; /* Negrita en el nombre de usuario */
+}
+
+.mensajes div small {
+  display: block;
+  font-size: 12px;
+  color: #777; /* Texto más suave para la fecha */
+}
+
+/* Estilos para las imágenes */
+.mensajes img {
+  display: block;
+  max-width: 100%;
+  height: 200px; /* Aumenta el tamaño de las imágenes */
+  object-fit: cover; /* Asegura que no se distorsione */
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Animación para los mensajes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.input-group.mt-3 {
+  padding: 10px;
+  background-color: #f9fafc;
+  border-top: 1px solid #ddd;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 0;
+  }
+}
